@@ -1,9 +1,9 @@
-name: "ejemplo_typescript"
 on: [pull_request, push]
 
 jobs:
   actions:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - run: docker build --tag islasgeci/ejemplo_typescript .
       - run: docker run --volume ${PWD}:/workdir islasgeci/ejemplo_typescript
