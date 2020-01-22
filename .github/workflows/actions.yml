@@ -1,0 +1,8 @@
+name: "ejemplo_typescript"
+on: [pull_request, push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      run: docker build .
