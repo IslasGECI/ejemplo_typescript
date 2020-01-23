@@ -1,4 +1,5 @@
 FROM node:lts
-RUN npm install --global typescript
+COPY . /workdir
 WORKDIR /workdir
+RUN npm install --global typescript
 CMD make

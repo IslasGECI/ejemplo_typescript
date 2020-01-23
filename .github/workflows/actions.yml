@@ -1,9 +1,13 @@
+name: Ciencia de Datos - GECI
 on: [pull_request, push]
 
 jobs:
   actions:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@v2
-      - run: docker build --tag islasgeci/ejemplo_typescript .
-      - run: docker run --volume ${PWD}:/workdir islasgeci/ejemplo_typescript
+      - name: Copia repositorio
+        uses: actions/checkout@v2
+      - name: Construye imagen
+        run: docker build --tag islasgeci/ejemplo_typescript .
+      - name: Ejecuta objetivo principal del Makefile
+      - run: docker run islasgeci/ejemplo_typescript
