@@ -1,10 +1,10 @@
 .PHONY: clean run
 
 run: hello.js
-	node hello.js
+	node $<
 
 hello.js: hello.ts
-	tsc
+	tsc $<
 
 clean:
 	rm --force *.js
