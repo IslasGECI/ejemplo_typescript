@@ -1,13 +1,10 @@
-.PHONY: clean coverage mutation run tests
+.PHONY: clean mutation run tests
 
 mutation:
 	stryker run
 
 tests:
 	ts-node /usr/local/lib/node_modules/jasmine/bin/jasmine --config=jasmine.json
-
-coverage:
-	nyc -r text -e .ts -x \"tests/*.test.ts\" npm run test
 
 run: src/hello.js
 	node $<

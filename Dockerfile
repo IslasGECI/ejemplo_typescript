@@ -3,7 +3,6 @@ WORKDIR /workdir
 COPY . .
 RUN npm install --global \
       jasmine \
-      nyc \
       ts-node \
       typescript\
         && \
