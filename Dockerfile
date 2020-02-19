@@ -1,6 +1,10 @@
 FROM node:lts
 COPY . /workdir
 WORKDIR /workdir
-RUN npm i -D jasmine nyc ts-node typescript && \
-    npm i -D @types/jasmine
+RUN npm install --global
+    @types/jasmine \
+    jasmine \
+    nyc \
+    ts-node \
+    typescript
 CMD make
