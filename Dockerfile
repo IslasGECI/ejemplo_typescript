@@ -1,6 +1,6 @@
 FROM node:lts
-COPY . /workdir
 WORKDIR /workdir
+COPY . .
 RUN npm install --global \
       jasmine \
       nyc \
