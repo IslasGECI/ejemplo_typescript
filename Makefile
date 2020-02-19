@@ -4,7 +4,7 @@ mutation:
 	stryker run
 
 tests:
-	ts-node node_modules/jasmine/bin/jasmine --config=jasmine.json
+	ts-node /usr/local/lib/node_modules/jasmine/bin/jasmine --config=jasmine.json
 
 coverage:
 	nyc -r text -e .ts -x \"tests/*.test.ts\" npm run test
