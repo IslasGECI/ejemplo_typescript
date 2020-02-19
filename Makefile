@@ -3,10 +3,10 @@
 mutation:
 	stryker run
 
-run: hello.js
+run: src/hello.js
 	node $<
 
-hello.js: hello.ts
+src/hello.js: src/hello.ts
 	tsc $<
 
 clean:

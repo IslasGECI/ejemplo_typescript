@@ -10,4 +10,4 @@ jobs:
       - name: Construye imagen
         run: docker build --tag islasgeci/ejemplo_typescript .
       - name: Ejecuta objetivo principal del Makefile
-        run: docker run islasgeci/ejemplo_typescript
+        run: docker run islasgeci/ejemplo_typescript make
