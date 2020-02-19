@@ -7,6 +7,6 @@ RUN npm install --global \
       ts-node \
       typescript\
         && \
-    npm install --global \
+    npm install --save-dev \
       @types/jasmine
 CMD make
