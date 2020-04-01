@@ -4,7 +4,7 @@ mutation:
 .PHONY: clean mutation run tests
 
 tests:
-	ts-node /usr/local/lib/node_modules/jasmine/bin/jasmine --config=jasmine.json
+	./node_modules/mocha/bin/mocha -r ts-node/register tests/**/*.test.ts
 
 run: src/hello.js
 	ts-node $<
