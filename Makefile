@@ -4,7 +4,7 @@ mutation:
 .PHONY: clean mutation run tests
 
 tests:
-	./node_modules/mocha/bin/mocha -r ts-node/register tests/**/*.test.ts
+	npm run test
 
 run: src/hello.js
 	ts-node $<
