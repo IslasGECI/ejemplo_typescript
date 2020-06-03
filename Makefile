@@ -4,7 +4,7 @@ mutation:
 .PHONY: clean mutation run tests
 
 tests:
-	npm run test
+	yarn && yarn test
 
 run: src/hello.js
 	ts-node $<
