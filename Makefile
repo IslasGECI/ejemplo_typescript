@@ -1,5 +1,5 @@
 mutation:
-	yarn workspace gatsby-theme-atom-service stryker run
+	yarn && yarn workspace gatsby-theme-atom-service stryker run
 
 .PHONY: clean mutation run tests
 
@@ -10,5 +10,6 @@ run: src/hello.js
 	ts-node $<
 
 clean:
+	rm --force *.lock
 	rm --force --recursive node_modules
 	rm --force package*.json
