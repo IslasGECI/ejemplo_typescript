@@ -12,4 +12,5 @@ run: src/hello.js
 clean:
 	rm --force *.lock
 	rm --force --recursive node_modules
-	rm --force package*.json
+	rm --force --recursive gatsby-theme-atom-service/node_modules
+	rm --force --recursive gatsby-theme-atom-service/coverage
