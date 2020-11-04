@@ -1,5 +1,5 @@
 mutation:
-	yarn && yarn workspace gatsby-theme-atom-service stryker run
+	yarn && yarn stryker run
 
 .PHONY: clean mutation run tests
 
