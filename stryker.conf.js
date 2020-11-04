@@ -1,13 +1,14 @@
-module.exports = function(config) {
-  config.set({
-    coverageAnalysis: "off", // Coverage analysis with a transpiler is not supported a.t.m.
-    jasmineConfigFile: "jasmine.json",
-    mutate: ["src/*.ts"],
-    mutator: "typescript",
-    packageManager: "npm",
-    reporters: ["clear-text", "progress"],
-    testFramework: "jasmine",
-    testRunner: "jasmine",
-    transpilers: ["typescript"]
-  });
+/**
+ * @type {import('@stryker-mutator/api/core').StrykerOptions}
+ */
+module.exports = {
+  mutator: "typescript",
+  packageManager: "yarn",
+  reporters: ["html", "clear-text", "progress"],
+  testRunner: "jest",
+  transpilers: ["typescript"],
+  coverageAnalysis: "off",
+  tsconfigFile: "tsconfig.json",
+  mutate: ["src/**/*.ts"],
+  jest: {config: require("./jest.config")}
 };

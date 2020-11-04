@@ -1,14 +1,15 @@
 mutation:
-	stryker run
+	yarn && yarn stryker run
 
 .PHONY: clean mutation run tests
 
 tests:
-	ts-node /usr/local/lib/node_modules/jasmine/bin/jasmine --config=jasmine.json
+	yarn && yarn test
 
 run: src/hello.js
 	ts-node $<
 
 clean:
+	rm --force *.lock
 	rm --force --recursive node_modules
-	rm --force package*.json
+	rm --force --recursive reports

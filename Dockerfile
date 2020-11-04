@@ -1,14 +1,6 @@
-FROM node:lts
+FROM node:13.10
 WORKDIR /workdir
 COPY . .
-RUN npm install --global \
-      jasmine \
-      stryker-cli \
-      ts-node \
-      typescript \
-        && \
-    npm install --save-dev \
-      @stryker-mutator/core \
-      @stryker-mutator/typescript \
-      @types/jasmine
+RUN npm i -D jest ts-jest typescript
+RUN npm i -D @types/jest
 CMD make
