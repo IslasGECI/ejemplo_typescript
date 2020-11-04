@@ -1,24 +1,19 @@
 {
-  "name": "hellojest",
-  "version": "1.0.0",
-  "description": "",
+  "name": "mumbling",
+  "version": "0.0.0-development",
+  "description": "Ejemplo de sumas de Rupany con mutantes",
   "main": "index.js",
   "scripts": {
-    "test": "yarn workspace gatsby-theme-atom-service test",
-    "coverage": "jest --coverage"
+    "test": "jest"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
+    "@stryker-mutator/core": "^3.3.1",
+    "@stryker-mutator/jest-runner": "^3.3.1",
+    "@stryker-mutator/typescript": "^3.1.0",
     "@types/jest": "^25.2.1",
-    "jest": "^25.2.7",
-    "ts-jest": "^25.3.1",
-    "typescript": "^3.8.3"
-  },
-  "private": true,
-  "workspaces": [
-    "gatsby-theme-atom-service",
-    "example"
-  ]
+    "jest": "^25.5.4",
+    "ts-jest": "^26.3.0",
+    "typescript": "^3.8.3",
+    "stryker-api": "^0.24.1"
+  }
 }
